@@ -1,7 +1,7 @@
-﻿Feature: UsersTest
-		 As a user, i want to view all existing users
+﻿Feature: Spring API test
+		 As a user
+		 I want to access rest api to perform CRUD operations
 
-@smoke
 Scenario: Get list of all users
 	Given User access the api
 	When User requests to view all users
