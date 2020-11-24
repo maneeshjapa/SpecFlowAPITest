@@ -1,0 +1,20 @@
+﻿Feature: UsersTest
+		 As a user, i want to view all existing users
+
+@smoke
+Scenario: Get list of all users
+	Given User access the api
+	When User requests to view all users
+	Then The service returns list of all users
+
+Scenario: Create a new user
+	Given User access the api
+	When User requests to create a user with details
+	| userName | password | firstName | lastName | email                   |
+	| TestUser | TestUser | TestUser  | TestUser | TestUser@automation.com |
+	Then The service should successfully create a user
+
+Scenario: Delete a user
+	Given User access the api
+	When User requests to delete a user with userId as 4
+	Then The Service should successfully delete the user
