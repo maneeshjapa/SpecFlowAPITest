@@ -18,7 +18,7 @@ namespace SpecFlowSample.Steps
         APIClient apiClient;
         private IRestResponse response;
         JObject responseBody;
-        int userId = 0;
+        int userId;
         [Given(@"User access the api")]
         public void GivenUserAccessTheApi()
         {
