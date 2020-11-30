@@ -7,6 +7,7 @@ using SpringRestApiTest.APIContext;
 using SpringRestApiTest.Resources;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using Newtonsoft.Json.Linq;
 
 namespace SpecFlowSample.Steps
 {
@@ -16,6 +17,8 @@ namespace SpecFlowSample.Steps
 
         APIClient apiClient;
         private IRestResponse response;
+        JObject responseBody;
+        int userId = 0;
         [Given(@"User access the api")]
         public void GivenUserAccessTheApi()
         {
@@ -44,7 +47,8 @@ namespace SpecFlowSample.Steps
         public void WhenUserRequestsToCreateAUserWithDetails(Table table)
         {
             response = apiClient.createUser(table.CreateInstance<User>());
-
+            responseBody = JObject.Parse(response.Content);
+            userId = (int)responseBody.GetValue("userId");
         }
 
         [Then(@"The service should successfully create a user")]
@@ -53,8 +57,8 @@ namespace SpecFlowSample.Steps
             assertResponse();
         }
 
-        [When(@"User requests to delete a user with userId as (.*)")]
-        public void WhenUserRequestsToDeleteAUserWithUserNameAs(int userId)
+        [When(@"User requests to delete the created user with userId")]
+        public void WhenUserRequestsToDeleteTheCreatedUserWithUserId()
         {
             response = apiClient.deleteUser(userId);
         }

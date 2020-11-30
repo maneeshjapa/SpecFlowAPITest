@@ -16,5 +16,9 @@ Scenario: Create a new user
 
 Scenario: Delete a user
 	Given User access the api
-	When User requests to delete a user with userId as 4
+	When User requests to create a user with details
+	| userName         | password         | firstName        | lastName         | email                           |
+	| TestUserToDelete | TestUserToDelete | TestUserToDelete | TestUserToDelete | TestUserToDelete@automation.com |
+	Then The service should successfully create a user
+	When User requests to delete the created user with userId
 	Then The Service should successfully delete the user

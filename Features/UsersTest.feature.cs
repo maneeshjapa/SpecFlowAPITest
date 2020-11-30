@@ -195,10 +195,28 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.Given("User access the api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "userName",
+                            "password",
+                            "firstName",
+                            "lastName",
+                            "email"});
+                table2.AddRow(new string[] {
+                            "TestUserToDelete",
+                            "TestUserToDelete",
+                            "TestUserToDelete",
+                            "TestUserToDelete",
+                            "TestUserToDelete@automation.com"});
 #line 19
- testRunner.When("User requests to delete a user with userId as 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User requests to create a user with details", ((string)(null)), table2, "When ");
 #line hidden
-#line 20
+#line 22
+ testRunner.Then("The service should successfully create a user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 23
+ testRunner.When("User requests to delete the created user with userId", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
  testRunner.Then("The Service should successfully delete the user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
