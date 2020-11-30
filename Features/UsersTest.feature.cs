@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpringRestApiTest.Features
+namespace SpecFlowAPITest.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,8 +20,8 @@ namespace SpringRestApiTest.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.5.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("UsersTest")]
-    public partial class UsersTestFeature
+    [NUnit.Framework.DescriptionAttribute("Spring API test")]
+    public partial class SpringAPITestFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace SpringRestApiTest.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "UsersTest", "\t\t As a user, i want to view all existing users", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Spring API test", "\t\t As a user\r\n\t\t I want to access rest api to perform CRUD operations", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,11 +75,9 @@ namespace SpringRestApiTest.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Get list of all users")]
-        [NUnit.Framework.CategoryAttribute("smoke")]
         public virtual void GetListOfAllUsers()
         {
-            string[] tagsOfScenario = new string[] {
-                    "smoke"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get list of all users", null, tagsOfScenario, argumentsOfScenario);
 #line 5
@@ -198,7 +196,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("User access the api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
- testRunner.When("User requests to delete a user with userId as 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("User requests to delete a user with userId as 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 20
  testRunner.Then("The Service should successfully delete the user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
