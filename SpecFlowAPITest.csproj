@@ -60,12 +60,6 @@
     
     <PackageReference Include="SpecFlow.NUnit" Version="3.5.5" />
     
-
-    
-
-    
-    <PackageReference Include="SpecRun.Runner" Version="3.5.8" />
-    
   </ItemGroup>
 
 </Project>
