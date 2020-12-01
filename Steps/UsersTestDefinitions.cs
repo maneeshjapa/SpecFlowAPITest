@@ -28,7 +28,7 @@ namespace SpecFlowSample.Steps
         public void assertResponse()
         {
             Console.WriteLine(JsonConvert.SerializeObject(response.Content, Formatting.Indented));
-            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+            Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         }
         
         [When(@"User requests to view all users")]
