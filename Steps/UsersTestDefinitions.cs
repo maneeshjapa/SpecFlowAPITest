@@ -48,13 +48,14 @@ namespace SpecFlowSample.Steps
         {
             response = apiClient.createUser(table.CreateInstance<User>());
             responseBody = JObject.Parse(response.Content);
-            userId = (int)responseBody.GetValue("userId1");
+            userId = (int)responseBody.GetValue("userId");
         }
 
         [Then(@"The service should successfully create a user")]
         public void ThenTheServiceShouldSuccessfullyCreateAUser()
         {
-            assertResponse();
+            //assertResponse();
+            Assert.Fail("Test Failure");
         }
 
         [When(@"User requests to delete the created user with userId")]
