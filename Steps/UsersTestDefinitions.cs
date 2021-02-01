@@ -48,7 +48,7 @@ namespace SpecFlowSample.Steps
         {
             response = apiClient.createUser(table.CreateInstance<User>());
             responseBody = JObject.Parse(response.Content);
-            userId = (int)responseBody.GetValue("userId");
+            userId = (int)responseBody.GetValue("userId1");
         }
 
         [Then(@"The service should successfully create a user")]
