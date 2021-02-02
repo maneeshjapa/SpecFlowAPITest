@@ -54,8 +54,8 @@ namespace SpecFlowSample.Steps
         [Then(@"The service should successfully create a user")]
         public void ThenTheServiceShouldSuccessfullyCreateAUser()
         {
-            //assertResponse();
-            Assert.Fail("Test Failure");
+            assertResponse();
+            //Assert.Fail("Test Failure");
         }
 
         [When(@"User requests to delete the created user with userId")]
